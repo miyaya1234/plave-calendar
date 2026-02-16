@@ -25,7 +25,7 @@ session.get("https://plavecalendar.com/", headers=headers)
 
 # 再访问 API
 resp = session.get(
-    "https://plavecalendar.com/api/events",
+    "https://blue-firefly-19a3.doubtmyself030.workers.dev/",
     params=params,
     headers=headers,
     timeout=10
@@ -36,7 +36,7 @@ resp.raise_for_status()
 
 if resp.status_code == 200:
     data = resp.json()
-    print(data)
+    # print(data)
     events_data = data["data"] if "data" in data else data
     calendar = Calendar()
     filename = "plavecalendar"+".ics"
