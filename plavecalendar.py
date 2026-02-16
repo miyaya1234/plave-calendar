@@ -3,23 +3,41 @@ from datetime import datetime
 from ics import Calendar, Event
 import pytz
 
+
 now = datetime.now()
 year = now.year
 month = now.month
-url = "https://plavecalendar.com/api/events"   # 换成你的接口
+
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0",
-    "Referer": "https://plavecalendar.com/",
     "Accept": "application/json, text/plain, */*",
+<<<<<<< HEAD
+    "Referer": "https://plavecalendar.com/",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"
+=======
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-    "Accept-Encoding": "gzip, deflate, br",
+>>>>>>> 9f81ce15ea2b59c80a6fe0f985f70c79c02e4abd
 }
 params = {
     "year": year,
     "month": month
 }
-resp = requests.get(url, params=params,headers=headers)
+
+session = requests.Session()
+# 先访问首页
+session.get("https://plavecalendar.com/", headers=headers)
+
+# 再访问 API
+resp = session.get(
+    "https://plavecalendar.com/api/events",
+    params=params,
+    headers=headers,
+    timeout=10
+)
+
+# url = "https://plavecalendar.com/api/events"
 resp.raise_for_status()
+
 if resp.status_code == 200:
     data = resp.json()
     print(data)
