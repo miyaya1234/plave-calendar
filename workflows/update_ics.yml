@@ -2,7 +2,7 @@ name: Update ICS
 
 on:
   schedule:
-    - cron: '0 15 * * 1'  # 每天早上 6 点 UTC
+    - cron: '0 15 * * 1'  # 每周触发
   workflow_dispatch:      # 可以手动触发
 
 jobs:
