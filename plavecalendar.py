@@ -11,12 +11,8 @@ month = now.month
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0",
     "Accept": "application/json, text/plain, */*",
-<<<<<<< HEAD
     "Referer": "https://plavecalendar.com/",
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"
-=======
-    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
->>>>>>> 9f81ce15ea2b59c80a6fe0f985f70c79c02e4abd
 }
 params = {
     "year": year,
