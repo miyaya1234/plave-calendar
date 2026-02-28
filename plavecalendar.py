@@ -68,11 +68,11 @@ def build_event(item):
 
     return e
 
-#生成ics文件
-def write_ics(calendar,filename = "plavecalendar.ics"):
-    with open(filename, "w", encoding="utf-8") as f:
-        f.writelines(calendar)
-        print("ICS 文件生成成功")
+# #生成ics文件
+# def write_ics(calendar,filename = "plavecalendar.ics"):
+#     with open(filename, "w", encoding="utf-8") as f:
+#         f.writelines(calendar)
+#         print("ICS 文件生成成功")
 
 
 def generate_calendar(yearmonth):
