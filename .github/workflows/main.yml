@@ -5,7 +5,6 @@ on:
     - cron: '13 7 * * 5'
     - cron: '34 7 * * 5'
     - cron: '12 0 * * 6'
-    - cron: '*/5 * * * *'
   workflow_dispatch:      # 可以手动触发
 
 jobs:
