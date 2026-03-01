@@ -1,4 +1,4 @@
-name: Update ICS
+name: Update ICS v2
 
 on:
   schedule:
